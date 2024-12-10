@@ -66,6 +66,7 @@
                             <a href="{{ route('produk') }}" class="small-box-footer">Selengkapnya <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         @endif
+                         <i class="fas fa-arrow-circle-right"></i>
                     </div>
                 </div>
                 <!-- ./col -->
