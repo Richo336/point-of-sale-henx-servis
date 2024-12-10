@@ -62,8 +62,10 @@
                         <div class="icon">
                             <i class="fas fa-cubes"></i>
                         </div>
-                        <a href="{{ route('produk') }}" class="small-box-footer">Selengkapnya <i
-                                class="fas fa-arrow-circle-right"></i></a>
+                        @if (Auth::user()->is_admin)
+                            <a href="{{ route('produk') }}" class="small-box-footer">Selengkapnya <i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        @endif
                     </div>
                 </div>
                 <!-- ./col -->
@@ -71,9 +73,12 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
+                            <div class="inner">
                             <h3>{{ DB::table('users')->count() }}</h3>
-
-                            <p>Akun</p>
+                            @if (Auth::user()->is_admin)
+                                <p>Kelola Akun</p>
+                            @endif
+                        </div>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person"></i>
